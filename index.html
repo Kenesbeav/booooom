@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#050403" />
+    <meta name="description" content="Кинематографичное поздравление с днем рождения" />
+    <title>Один особенный день</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="scene" aria-label="Кинематографичная трехмерная сцена"></canvas>
+
+      <section id="loader" class="loader" aria-live="polite">
+        <div class="loader__line"><span id="loader-progress"></span></div>
+        <p id="loader-label">Подготавливаем сцену · 0%</p>
+      </section>
+
+      <section id="intro" class="intro">
+        <div class="intro__noise"></div>
+        <button id="start" class="start-button" type="button" disabled>
+          <span class="start-button__face">НАЖМИ</span>
+          <span class="start-button__sub">звук включен</span>
+        </button>
+        <p class="intro__hint">лучше смотреть в наушниках</p>
+      </section>
+
+      <div id="eyelids" class="eyelids" aria-hidden="true">
+        <div class="eyelid eyelid--top"></div>
+        <div class="eyelid eyelid--bottom"></div>
+      </div>
+
+      <div class="film" aria-hidden="true">
+        <div class="film__vignette"></div>
+        <div class="film__grain"></div>
+        <div id="flash" class="film__flash"></div>
+        <div id="dust-hit" class="film__dust-hit"></div>
+      </div>
+
+      <button id="sound" class="icon-button sound-button" type="button" aria-label="Выключить звук" aria-pressed="false">
+        <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Zm12.2 3a4.2 4.2 0 0 0-2.2-3.7v7.4a4.2 4.2 0 0 0 2.2-3.7Zm-2.2-8v2.1a6.5 6.5 0 0 1 0 11.8V20a8.5 8.5 0 0 0 0-16Z"/></svg>
+        <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Zm12.6 3 2.7-2.7-1.4-1.4-2.7 2.7-2.7-2.7-1.4 1.4 2.7 2.7-2.7 2.7 1.4 1.4 2.7-2.7 2.7 2.7 1.4-1.4-2.7-2.7Z"/></svg>
+      </button>
+
+      <section id="finale" class="finale" aria-hidden="true">
+        <div class="finale__atmosphere" aria-hidden="true">
+          <div class="finale__rays"></div>
+          <div class="finale__balloons">
+            <i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="finale__flowers">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="finale__popper finale__popper--left"><i></i><b></b></div>
+          <div class="finale__popper finale__popper--right"><i></i><b></b></div>
+        </div>
+        <div class="finale__confetti" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="finale__flare"></div>
+        <div class="finale__content">
+          <p id="finale-kicker" class="finale__kicker"></p>
+          <h1 id="finale-title" class="finale__title"></h1>
+          <div class="finale__rule"></div>
+          <p id="finale-message" class="finale__message"></p>
+          <p id="finale-wish" class="finale__wish"></p>
+          <button id="replay" class="replay-button" type="button">Посмотреть еще раз</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
