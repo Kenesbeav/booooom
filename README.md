@@ -1,5 +1,7 @@
 # Birthday: Zero Hour
 
+Живая версия: [https://kenesbeav.github.io/booooom/](https://kenesbeav.github.io/booooom/)
+
 Полноэкранное 3D-поздравление на Three.js: пробуждение от первого лица, пыльный город, пролет самолета, взрыв, ударная волна и финальный титр.
 
 ## Запуск
